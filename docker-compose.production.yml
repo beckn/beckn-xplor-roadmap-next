@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  app:
+    container_name: nextjs-app
+    build: .
+    ports:
+      - "1094:3000"
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/yourdbname
+    depends_on:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27088:27017"
+    volumes:
+      - mongodb_data:/data/db
+volumes:
+  mongodb_data:

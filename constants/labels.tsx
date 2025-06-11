@@ -1,0 +1,5 @@
+export const DETAILS = 'View Details'
+export const LEARNMORE = 'Learn more'
+export const POST = 'Post'
+export const DEMO = 'Watch Demo'
+export const DOWNLOAD = 'Download'
